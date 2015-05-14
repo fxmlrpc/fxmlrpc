@@ -17,6 +17,9 @@ use fXmlRpc\Serialization\Serializer;
 use fXmlRpc\Client\Transport;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
+/**
+ * @author Lars Strojny <lstrojny@php.net>
+ */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -65,7 +68,8 @@ class ClientTest extends \PHPUnit_Framework_TestCase
             ->with('RESPONSE')
             ->will($this->returnValue('NATIVE VALUE'));
 
-        $this->assertSame('NATIVE VALUE', $this->client->call('methodName', ['p1', 'p2']));    }
+        $this->assertSame('NATIVE VALUE', $this->client->call('methodName', ['p1', 'p2']));
+    }
 
     public function testCallSerializer()
     {

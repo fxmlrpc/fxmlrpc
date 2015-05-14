@@ -15,6 +15,9 @@ use fXmlRpc\Client;
 use fXmlRpc\Client\MulticallBuilder;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
+/**
+ * @author Lars Strojny <lstrojny@php.net>
+ */
 class MulticallBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /**

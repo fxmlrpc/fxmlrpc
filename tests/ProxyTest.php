@@ -15,6 +15,9 @@ use fXmlRpc\Client;
 use fXmlRpc\Client\Proxy;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
+/**
+ * @author Lars Strojny <lstrojny@php.net>
+ */
 class ProxyTest extends \PHPUnit_Framework_TestCase
 {
     /**

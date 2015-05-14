@@ -12,7 +12,6 @@
 namespace fXmlRpc\Client;
 
 use fXmlRpc\Client as ClientInterface;
-use fXmlRpc\Client\Exception\ResponseException;
 use fXmlRpc\Exception\InvalidArgumentException;
 use fXmlRpc\Serialization\Parser;
 use fXmlRpc\Serialization\Serializer;
@@ -151,7 +150,7 @@ final class Client implements ClientInterface
         $result = $this->parser->parse($response, $isFault);
 
         if ($isFault) {
-            throw ResponseException::fault($result);
+            throw Exception\FaultException::createFromResponse($result);
         }
 
         return $result;
