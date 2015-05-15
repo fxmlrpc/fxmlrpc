@@ -12,7 +12,6 @@
 namespace fXmlRpc\Client;
 
 use fXmlRpc\Client as ClientInterface;
-use fXmlRpc\Exception\InvalidArgumentException;
 use fXmlRpc\MulticallBuilder as MulticallBuilderInterface;
 
 /**
@@ -64,7 +63,7 @@ final class MulticallBuilder implements MulticallBuilderInterface
     public function addCall($methodName, array $params = [], callable $onSuccess = null, callable $onError = null)
     {
         if (!is_string($methodName)) {
-            throw InvalidArgumentException::expectedParameter(1, 'string', $methodName);
+            throw Exception\InvalidArgumentException::expectedParameter(1, 'string', $methodName);
         }
 
         $this->calls[$this->index] = compact('methodName', 'params');

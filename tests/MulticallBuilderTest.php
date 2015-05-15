@@ -202,7 +202,7 @@ class MulticallBuilderTest extends \PHPUnit_Framework_TestCase
     public function testInvalidMethodType()
     {
         $this->setExpectedException(
-            'fXmlRpc\Exception\InvalidArgumentException',
+            'fXmlRpc\Client\Exception\InvalidArgumentException',
             'Expected parameter 1 to be of type "string", "object" of type "stdClass" given'
         );
 

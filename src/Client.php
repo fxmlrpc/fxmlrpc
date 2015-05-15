@@ -12,7 +12,6 @@
 namespace fXmlRpc\Client;
 
 use fXmlRpc\Client as ClientInterface;
-use fXmlRpc\Exception\InvalidArgumentException;
 use fXmlRpc\Serialization\Parser;
 use fXmlRpc\Serialization\Serializer;
 
@@ -89,7 +88,7 @@ final class Client implements ClientInterface
     public function setUri($uri)
     {
         if (!is_string($uri)) {
-            throw InvalidArgumentException::expectedParameter(0, 'string', $uri);
+            throw Exception\InvalidArgumentException::expectedParameter(0, 'string', $uri);
         }
 
         $this->uri = $uri;
@@ -141,7 +140,7 @@ final class Client implements ClientInterface
     public function call($methodName, array $params = [])
     {
         if (!is_string($methodName)) {
-            throw InvalidArgumentException::expectedParameter(0, 'string', $methodName);
+            throw Exception\InvalidArgumentException::expectedParameter(0, 'string', $methodName);
         }
 
         $params = array_merge($this->prependParams, $params, $this->appendParams);

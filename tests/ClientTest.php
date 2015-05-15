@@ -133,7 +133,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function testInvalidMethodName()
     {
         $this->setExpectedException(
-            'fXmlRpc\Exception\InvalidArgumentException',
+            'fXmlRpc\Client\Exception\InvalidArgumentException',
             'Expected parameter 0 to be of type "string", "object" of type "stdClass" given'
         );
         $this->client->call(new \stdClass());
@@ -142,7 +142,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function testInvalidUri()
     {
         $this->setExpectedException(
-            'fXmlRpc\Exception\InvalidArgumentException',
+            'fXmlRpc\Client\Exception\InvalidArgumentException',
             'Expected parameter 0 to be of type "string", "object" of type "stdClass" given'
         );
         $this->client->setUri(new \stdClass());
