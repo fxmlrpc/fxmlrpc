@@ -23,6 +23,7 @@
     "require-dev": {
         "phpunit/phpunit": "~4.4",
         "fxmlrpc/native-serialization": "dev-initial_import",
+        "fxmlrpc/http-transport": "dev-initial_import",
         "php-http/guzzle5-adapter": "dev-initial_import"
     },
     "autoload": {
