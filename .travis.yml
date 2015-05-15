@@ -21,6 +21,7 @@ matrix:
 install:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --prefer-source --no-interaction
+  - npm install
 
 script: vendor/bin/phpunit ${PHPUNIT_FLAGS}
 
