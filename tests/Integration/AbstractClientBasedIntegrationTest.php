@@ -49,7 +49,7 @@ abstract class AbstractClientBasedIntegrationTest extends \PHPUnit_Framework_Tes
         $clients = [];
         $this->generateAllPossibleCombinations(
             [
-                $this->getTransport(),
+                $this->getTransports(),
                 $this->getParsers(),
                 $this->getSerializers(),
             ],
@@ -106,10 +106,10 @@ abstract class AbstractClientBasedIntegrationTest extends \PHPUnit_Framework_Tes
             }
         } else {
             $client = new Client(
-                static::$endpoint,
                 $this->dependencyGraph[0],
                 $this->dependencyGraph[1],
-                $this->dependencyGraph[2]
+                $this->dependencyGraph[2],
+                static::$endpoint
             );
 
             $clients[] = [$client, $this->dependencyGraph[0], $this->dependencyGraph[1], $this->dependencyGraph[2]];

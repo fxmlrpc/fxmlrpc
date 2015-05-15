@@ -23,10 +23,14 @@
         "fxmlrpc/transport-implementation": "0.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.4",
         "fxmlrpc/native-serialization": "dev-initial_import",
+        "fxmlrpc/sax-serialization": "dev-initial_import",
         "fxmlrpc/http-transport": "dev-initial_import",
-        "php-http/guzzle5-adapter": "dev-initial_import"
+        "php-http/guzzle5-adapter": "dev-initial_import",
+        "phpunit/phpunit": "~4.4",
+        "symfony/process": "~2.1",
+        "lstrojny/hmmmath": "*",
+        "internations/kodierungsregelwerksammlung": "dev-master"
     },
     "autoload": {
         "psr-4": {
